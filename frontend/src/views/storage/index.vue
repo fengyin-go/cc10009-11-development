@@ -67,6 +67,8 @@
       <span>共 {{ total }} 条数据落盘记录</span>
       <span v-if="errorMessage" class="error-text">{{ errorMessage }}</span>
     </footer>
+
+    <PersistManifestPanel />
   </section>
 </template>
 
@@ -79,6 +81,7 @@ import {
   moduleMeta,
   runAction as applyAction,
 } from '@/api/local-service'
+import PersistManifestPanel from '@/components/PersistManifestPanel.vue'
 import type { EntryRow } from '@/data/types'
 
 const meta = moduleMeta('storage')
